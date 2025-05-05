@@ -1,0 +1,211 @@
+*{ /* Aplicar un margen a toda la pagina*/
+    /* margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;*/
+    /*Permite quee el margin y padding  */
+                           /* pasen a formar del ancho y alto de la caja y los calcule de manera autoatica*/
+  box-sizing: border-box;
+   
+}
+
+body{
+        background-color: #f7fffa; 
+         background-image: linear-gradient(
+                rgba(33, 151, 75, 0.3),
+            rgba(29, 179, 96, 0.2)
+        ), url(../Imagenes/fondo.jpg); 
+       
+        font-family: 'Lato', sans-serif;
+        /* propiedades para que una imagen se ajuste a un div */
+        background-position: center;
+        background-size: cover; /* Se ajusta al contenido, también puede ser auto, cover*/
+        /* filter: blur(9.5px); */
+}
+
+    .padre{
+       
+        /* overflow: auto; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 5px 10px 10px rgb(14, 51, 26);
+        /* background-color: #21974e; */
+        margin: 5% 10% 5% 10%;
+        width: 80%;
+        height: fit-content;
+       
+        
+    }
+
+    /* ---------------------Banner------------- */
+    .logo{
+        display: flex;
+        flex-wrap: wrap;
+        background: linear-gradient(to bottom, #21974e, #1c4432);
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        border-radius: 20px 20px 0px 0px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around; 
+    }
+
+    .eslogan{
+        color: white;
+        font-size: 25px;
+    }
+
+    .img_logo{
+        /* background-color: rgb(183, 255, 0);  */
+        background-image: url("../Imagenes/blanco.png");
+        background-position: center center;/*los posiciona en el centro*/
+            background-repeat: no-repeat;/* No repite la imagen*/
+            background-size: 30%; /* Se ajusta al contenido, también puede ser auto, cover*/
+        margin-top: 1%;
+        width:100% ;
+        height: 65%;
+    }
+
+    /*------------------------------- Datos----------------------------------*/
+    .datos{
+
+        background-color: rgb(255, 255, 255);
+        width: 100%; 
+        padding: 20px; 
+        border-radius: 0 0 20px 20px; 
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: #21974e;
+     } 
+
+
+    .datos input{
+        width: 70%;
+        margin: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom:1px solid #21974e;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            font-size: 20px; 
+     }
+
+    .datos input:focus{
+        outline: none;
+            border-bottom:3px solid #21974e;
+            font-size: 20px;
+            
+    }
+
+     .personales{
+        margin: 5px ; 
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+     }
+
+     .datos label{
+        font-size: 25px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        color: black;
+     }
+
+     .personales i{
+        margin-left: 10px;
+        margin-right: 20px;
+        width: 40px;
+        height: 32px;
+     }
+
+     .button{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        font-size: 20px;
+     }
+
+     .btnlogin{
+        display: inline-block;
+        background: linear-gradient(to bottom, #21974e,#21974e, #1c4432);
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+        padding: 20px 20px;
+        cursor: pointer;
+    }
+
+        .btnlogin i {
+            margin-left: 10px;
+            color: white;
+        }
+
+/*---------- Configuración --------------*/
+@media (max-width: 1120px) {
+   
+    .datos input{
+        width: 80%;
+        margin: 1px;
+        padding: 10px;
+            font-size: 20px; 
+     }
+    
+    .personales{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 800px) {
+    .eslogan{
+        color: white;
+        font-size: 15px;
+    }
+
+    .img_logo{
+        
+        background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 50%; 
+        margin-top: 1%;
+        width:100% ;
+        height: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+   
+    .img_logo{
+        
+        background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 70%; 
+        margin-top: 1%;
+        width:100% ;
+        height: 70%;
+    }
+
+    .datos label{
+        font-size: 20px;
+     }
+
+    .datos input{
+        width: 75%;
+            font-size: 13px; 
+     }
+     .personales i{
+        margin-left: 1px;
+        margin-right: 1px;
+        font-size: 15px;
+     }
+}
+

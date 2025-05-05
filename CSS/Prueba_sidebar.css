@@ -1,0 +1,40 @@
+#menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    /* Estilos adicionales para el icono del menú */
+  }
+  
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #f1f1f1;
+    transition: all 0.3s ease;
+    /* Estilos adicionales para el menú lateral */
+  }
+  
+  #menu-toggle:checked ~ #sidebar {
+    left: 0;
+    /* Muestra el menú lateral cuando el input checkbox está seleccionado */
+  }
+  
+  main {
+    margin-left: 200px;
+    /* Espacio para el menú lateral */
+  }
+
+  div{
+    width: 100px;
+    background: aqua;
+    height: 50px;
+    padding: 10px;
+  }
+
+  p{
+    color: #f1f1f1;
+    background: purple;
+    word-wrap: break-word;
+  }

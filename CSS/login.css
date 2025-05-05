@@ -1,0 +1,409 @@
+*{ /* Aplicar un margen a toda la pagina*/
+    /* margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;*/
+    /*Permite quee el margin y padding  */
+                           /* pasen a formar del ancho y alto de la caja y los calcule de manera autoatica*/
+  box-sizing: border-box;
+   
+}
+
+body{
+        
+        background-image: linear-gradient(
+                rgba(33, 151, 75, 0.3),
+            rgba(29, 179, 96, 0.2)
+        ), url(../Imagenes/fondo.jpg);
+       
+        
+        font-family: 'Lato', sans-serif;
+         
+        /* propiedades para que una imagen se ajuste a un div */
+        background-position: center center;/*los posiciona en el centro*/
+        background-repeat: repeat;/* No repite la imagen*/
+        background-size: cover; /* Se ajusta al contenido, también puede ser auto, cover*/
+        
+}
+
+
+
+    .padre{
+        display: flex;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 5px 10px 10px rgb(14, 51, 26);
+        margin: 5% 10% 5% 10%;
+        width: 80%;
+        height: 600px;
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        display: flex;
+        flex-wrap: wrap;
+        background: linear-gradient(to bottom, rgba(33,151,75, 0.9), rgba(28,68,50,0.9) );
+        /* #21974e, #1c4432 */
+        width: 50%;
+        border-radius: 20px 0px 0px 20px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .Logout{
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .eslogan{
+            color: white;
+            /* background-color: blueviolet; */
+            
+            font-size: 30px;
+        }
+
+        .img_logo{
+            background-image: url("../Imagenes/blanco.png");
+            background-position: center center;/*los posiciona en el centro*/
+                background-repeat: no-repeat;/* No repite la imagen*/
+                background-size: 70%; /* Se ajusta al contenido, también puede ser auto, cover*/
+               
+            width:100% ;
+            height: 25%;
+        }
+
+        .enlaces{
+            display: flex;
+            flex-wrap: wrap;
+            width:100% ;
+            height: 15%;
+            align-items: center;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .enlaces a{
+            color: rgb(248, 248, 248);
+            padding: 10px;
+            
+        }
+        .enlaces a:hover{
+            color: rgb(183, 250, 183);
+        }
+
+    .datos{
+        display: flex;
+        flex-direction: column;
+        background:  rgb(255, 255, 255,0.9);
+        border-radius: 0 20px 20px 0;
+        width: 50%;   
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+        .bienvenido{
+        font-size: 50px;
+        padding: 20px;
+        color: #21974e
+        }
+
+        .entradas{
+            display: flex;
+            padding: 20px;
+            color: #21974e;
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: column;
+            
+            
+        }
+
+        ::placeholder{
+            font-size: 20px
+        }
+        
+        .user{
+           
+            border-bottom:1px solid #21974e;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            margin-bottom: 10px ;
+            width: 80%;
+            height: 50px;
+            padding: 10px;
+            font-size: 20px;
+            
+        }
+        
+        .user:focus{
+            outline: none;
+            border-bottom:3px solid #21974e;
+            font-size: 20px;
+        }
+        
+        .icon-user{
+            padding: 10px;
+        }
+       
+    
+        .contra{
+            
+            border-bottom:1px solid #21974e;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            margin-bottom: 10px ;
+            width: 80%;
+            height: 50px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .contra:focus{
+            outline: none;
+            border-bottom:3px solid #21974e;
+            font-size: 20px;
+        }
+
+        .icon-pass{
+           padding: 10px
+        }
+       
+
+        .btnlogin{
+            display: inline-block;
+            background: linear-gradient(to bottom, #21974e,#21974e, #1c4432);
+            color: #fff;
+            font-size: 16px;
+            
+            border: none;
+            border-radius: 20px;
+            padding: 20px 20px;
+            cursor: pointer;
+        }
+
+            .btnlogin i {
+                margin-left: 10px;
+                color: white;
+            }
+            
+            .btnlogin:hover {
+                background-color: #19703a;
+                color: white;
+            }
+
+        .registrar{
+            color: #21974e;
+            margin-bottom: 20px;
+        }
+
+        .registrar a{
+            color: black;
+        }
+
+
+    /* ---------------------------------------- */
+    .orden{
+        order: 1; /* permite ordenar primero solo el elelemnto que se escogio */
+        align-self: flex-end;/* solo el elemnto selecionado es el que se va a mover flex-start-end, center*/
+        margin-left: 20px;
+       }
+    
+    /* ------------------- Responsive ----------------------------*/
+    @media (max-width: 800px) {/* Le decios quee despues de cireto pixelaje se acomode el tamaño de la tarjeta*/
+        .padre{
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .logo{
+            width: auto;
+            height: 30%;
+            font-size: 15px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .eslogan{
+        margin-top: 10px;
+        margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+            .img_logo{
+                /* background-color: rgb(183, 255, 0);  */
+                
+                background-position: center center;/*los posiciona en el centro*/
+                    background-repeat: no-repeat;/* No repite la imagen*/
+                    background-size: 50%; /* Se ajusta al contenido, también puede ser auto, cover*/
+                padding: 15px;
+                width:100% ;
+                height: 75%;
+            }
+
+            
+
+            .enlaces{
+                /* background-color: rgb(255, 0, 102); */
+                width:100% ;
+                height: 5%;
+                align-items: center;
+                padding: 1px 0;
+                margin-bottom: 30px;
+                margin-top: auto;
+               
+            }
+            .enlaces a{
+                font-size: 10px;
+                
+            }
+
+        .datos{
+            width: auto;
+            height: 70%;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .bienvenido{
+            font-size: 20px;
+        }
+
+        
+            .entradas{ 
+                padding: 20px;
+                color: #21974e;
+                width: 100%;
+                font-size: 15px;
+                align-items: center;
+                flex-direction: column; 
+            }
+    
+            ::placeholder{
+                font-size: 15px;
+            }
+            
+            .user{
+               
+                font-size: 15px;
+            }
+            
+            .user:focus{
+                
+                font-size: 15px;
+            }
+            
+            .icon-user{
+                font-size: 10px;
+                padding: 10px;
+            }
+        
+            .contra{
+                
+                font-size: 15px;
+            }
+    
+            .contra:focus{
+                font-size: 15px;
+            }
+    
+            .icon-pass{
+                font-size: 10px;
+                padding: 10px;
+            }
+           
+            .btnlogin{
+                font-size: 10px;
+            }
+    
+            .registrar{
+                font-size: 15px;
+            }
+    
+          
+
+    }
+    
+    @media (max-width: 350px) {
+        .logo{
+           
+            height: 40%;  
+        }
+
+            .img_logo{
+            
+                background-position: center center;/*los posiciona en el centro*/
+                    background-repeat: no-repeat;/* No repite la imagen*/
+                    background-size: 65%; /* Se ajusta al contenido, también puede ser auto, cover*/
+                padding: 10px;
+                width:100% ;
+                height: 65%;
+            }
+
+            .enlaces{   
+                width:100% ;
+                height: 20%;
+                align-items: center;
+                padding: 5px 0;  
+            }
+
+            .datos{
+                height: 60%;           
+            }
+    
+            .bienvenido{
+                font-size: 15px;
+            }
+                .entradas{ 
+                    padding: 20px;
+                    color: #21974e;
+                    width: 100%;
+                    font-size: 10px;
+                    align-items: center;
+                    flex-direction: column;   
+                }
+        
+                ::placeholder{
+                    font-size: 10px;
+                }
+                
+                .user{
+                   
+                    font-size: 10px;
+                }
+                
+                .user:focus{
+                    
+                    font-size: 10px;
+                }
+                
+                .icon-user{
+                    font-size: 10px;
+                    padding: 5px;
+                }
+               
+            
+                .contra{
+                    
+                    font-size: 10px;
+                }
+        
+                .contra:focus{
+                    font-size: 10px;
+                }
+        
+                .icon-pass{
+                    font-size: 10px;
+                    padding: 5px;
+                }
+               
+        
+                .btnlogin{
+                    font-size: 8px;
+                }
+        
+                .registrar{
+                    font-size: 10px;
+                }
+              }
+       

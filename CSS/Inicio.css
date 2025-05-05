@@ -1,0 +1,878 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+   
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background:  #747678;
+    height: 900px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 20;
+    background: linear-gradient(to bottom, #1c4432, #21974e);
+    height: 60px;
+    padding: 20px 50px 50px 40px;
+}
+
+i{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+    .Logout{
+    
+    font-size: 20px;
+    }
+    .Logout a{
+    
+    color: white;
+    text-decoration: none;
+    }
+
+    header label{
+    /* background-color: blue; */
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#sidebar {
+    position: fixed;
+    top: 70px;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    background: linear-gradient(to bottom, #21974e, #21974e, #1c4432);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;   
+    text-align: center;
+    /* Estilos adicionales para el menú lateral */
+  }
+
+ 
+    #sidebar ul{
+        width: 100%;
+        overflow: hidden;
+        
+    }
+
+    #sidebar li{
+        list-style: none;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+    #sidebar a{
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    #sidebar li:hover{
+        background: rgba(0, 0, 0, 0.2);
+        border-left: white 5px solid;
+    }
+
+    .contenido_hijo{
+        /* background-color: darkorange; */
+        width: 100%;
+        height: 700px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+        .Logo{
+          /* background: purple;   */
+            background-image: url("../Imagenes/Logo_Aspersoras_Arsaro.png");
+            background-position: center center;/*los posiciona en el centro*/
+            background-repeat: no-repeat;/* No repite la imagen*/
+            background-size: 30%; /* Se ajusta al contenido, también puede ser auto, cover*/
+            margin-top: 1%;
+            width:100% ;
+            height: 30%;
+            
+        }
+
+
+        .button_label{
+            /* background-color: chartreuse; */
+            width: 100%;
+            padding: 1px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between ;
+        }
+
+            .buton_agregar{
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+                margin-left: 40px;
+                font-size: 20px;
+
+            }
+            
+            .btnlogin{
+                display: inline-block;
+                background: linear-gradient(to bottom, #21974e,#21974e, #1c4432);
+                color: #fff;
+                font-size: 20px;
+                border: none;
+                border-radius: 20px;
+                padding: 20px 20px;
+                cursor: pointer;
+            }
+                .btnlogin a{
+                    text-decoration: none;
+                    color:white;
+                }
+        
+                .btnlogin i {
+                    margin-left: 10px;
+                    color: white;
+                }
+
+            
+            .label_cita{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                /* background: yellow; */
+                margin: 10px;
+                margin-right: 40px;
+                padding: 10px;
+                align-items: center;
+                
+            }
+
+            .label_cita label{
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+        .Tabla{
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255, 0.8);
+            width: 100%;
+            height: 450px;
+            overflow-y: scroll;
+            border-radius: 20px;
+        }
+
+            .tabla-citas{
+                width: 100%;
+                height: auto;
+                 border: 1px solid #1c4432; 
+               
+            }
+            .campos thead{  /* contenedor campos padre*/
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .campos th{
+                text-align: center;
+                background: linear-gradient(to bottom, #21974e,#21974e, #1c4432);
+                padding: 10px;
+                width: 20px;
+                max-width: 20px;
+                color: white;
+              
+            }
+
+            tbody{
+                width: 100%;  
+            }
+            
+            tr{
+                width: 100%;
+                overflow: auto; 
+            }
+
+            td{
+                border-bottom: #21974e 1px solid;
+                width: 20px;
+                padding: 15px;
+                max-width: 20px;
+                height: 15px; /* Establece la altura fija en 50px, ajusta según tus necesidades */
+                overflow: hidden; /* Oculta el contenido que supere la altura máxima */
+                white-space: nowrap; /* Evita que el texto se envuelva en varias líneas */
+                overflow-x: auto; /* Le areo a cada td n scroll en x para qe se pueda isalizar dde mejor manera el cottenido interno*/
+            }
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 60px;
+    background: linear-gradient(to bottom, #ffffff,#ffffff, #747678);
+    height: 900px;
+}
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Estilos para el "pulgar" de la barra de desplazamiento */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #21974e, #1c4432);
+    border-radius: 10px;
+  }
+  
+  /* Estilos para el fondo de la barra de desplazamiento */
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+
+  /* activar y desactivar checkbox */
+
+  #menu-toggle{
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ #sidebar {
+    left: 0;
+    /* Muestra el menú lateral cuando el input checkbox está seleccionado */
+  }
+  
+/* --------------------------------Resposive--------------------------------------- */
+
+@media (max-width: 768px) {
+    .buton_agregar{
+        font-size: 10px;
+
+    }
+
+    .btnlogin{
+        font-size: 15px;
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+
+    .Logo{
+        background-size: 40%; /* Se ajusta al contenido, también puede ser auto, cover*/
+        height: 40%;
+    }
+    .Tabla{
+        height: 250px;
+    }
+        
+}
+
+@media (max-width: 600px) {
+    
+    .Logout{
+    font-size: 10px;
+    }
+
+    header label{
+    font-size: 10px;
+    }
+    
+
+    .btnlogin{
+        
+        font-size: 20px;
+        padding: 5px 5px 5px 5px;
+        cursor: pointer;
+    }
+
+    .btnlogin i{
+        display: none;
+    }
+
+    .Logo{
+        background-position: center;/*los posiciona en el centro*/
+        background-repeat: no-repeat;/* No repite la imagen*/
+        background-size: contain;/* Se ajusta al contenido, también puede ser auto, cover*/
+        height: 200px;
+        padding: 10px;
+    }
+
+    .contenido_hijo{
+        padding: 5px;
+    }
+
+    .tabla-citas{
+        width: 1000px;
+    }
+
+        
+}
+
+
+/* ----------------------------- Agreegar citas---------------------- */
+
+
+.contenido2{
+    width: 100%;
+    height: 900px;
+    padding: 10px;
+    margin-top: 60px;
+    /* background: greenyellow; */
+    /* height: 800px;  */
+}
+
+.contenido_hijo2{
+    background: linear-gradient(to bottom, #ffffff,#ffffff, #747678);
+    width: 100%;
+    height: 700px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+.encabbezado{
+    /* background: rgb(227, 47, 255); */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+
+    h1{
+        font-size: 25px;
+        
+    }
+    .carrusel{
+         background-color: rgb(255, 255, 255); 
+         border-radius: 20px;
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .contenido_cards{ /* Contenedor tarjetas*/
+        background: #ffffff;
+        border-radius: 20px;
+        height: auto;
+        padding: 20px;
+        width: 2000px;
+        max-width:  1500px;
+        display: flex;
+        overflow: hidden; /* Oculta el contenido que supere la altura máxima */
+        overflow-x: auto; /* Le areo a cada td n scroll en x para qe se pueda isalizar dde mejor manera el cottenido interno*/
+    }
+
+    .contenido_cards > *{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .card{ /*Tarjeta*/
+        background-color: #fff;
+        height: auto;
+        width: 250px;
+        padding: 10px;
+        margin-left:20px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px #747678;
+        scroll-snap-align: start;
+    }
+
+    .card img{
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card label{
+        margin-bottom: 10px;
+    }
+
+    .card-body{
+        /* background: #21974e; */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: space-between;    
+    }
+    
+    .card-body label{
+        padding: 10px;
+        width: 100%;
+        height: 50px;
+        white-space: normal; 
+        line-height: 1.5
+        /* background: #ff3c3c; */
+    }
+
+
+
+    .Selecciona_citas{
+        width: 100%;
+        /* background: purple; */
+        padding: 10px;
+        height: auto;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+        .select_agente{
+            /* background: yellow; */
+            height: auto;
+            padding: 10px;
+            margin-top: 10px;
+           
+        }
+
+        .select_servicio{
+            /* background: brown; */
+            height: auto;
+            padding: 10px;
+            margin-top: 10px;
+            
+        }
+
+        select{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 10px;
+            transition: all 300ms ease-in-out;
+            
+        }
+
+        .buton_agregar2{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            margin-left: 40px;
+            font-size: 20px;
+
+        }
+        
+        .btnlogin2{
+            display: inline-block;
+            background: linear-gradient(to bottom, #21974e,#21974e, #1c4432);
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            padding: 20px 20px;
+            cursor: pointer;
+        }
+            .btnlogin2 a{
+                text-decoration: none;
+                color:white;
+            }
+    
+            .btnlogin2 i {
+                margin-left: 10px;
+                color: white;
+            }
+
+        /* -------- media wuery------------- */
+        @media (max-width: 600px) {
+            
+            .Logout{
+                font-size: 13px;
+                display: flex ;
+            }
+
+            .menu{
+                display: flex ;
+                flex-direction: row;
+            }
+
+            select{
+                font-size: 15px;
+            }
+
+            .Selecciona_citas{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;  
+            }
+            
+            .btnlogin{
+                font-size: 15px;
+                padding: 5px;
+                height: 50px;
+                width: 100%;
+            }
+
+            .contenido2{
+                width: 138%; 
+            }
+
+            .contenido2 .buton_agregar{
+                font-size: 50px;
+            }
+
+            .contenido_hijo2{
+                height: 400px;
+                
+            }
+
+            .contenido_hijo2 .Logo{
+                background-size: 100%; /* Se ajusta al contenido, también puede ser auto, cover*/
+                height: 50%;
+            }
+
+            .btnlogin2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                padding: 10px 10px 10px 10px;
+                cursor: pointer;
+            }
+                
+        }
+    /* --------------------------- Zonas---------------------------------------- */
+   
+
+    .Titulo{
+        /* background-color: #1c4432; */
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .Mapa{
+        background: #fff;
+        width: 100%;
+        height: 550px;
+    }
+
+
+
+    
+        
+
+    /* ----------------------------------- chat --------------------------------------- -------*/
+
+    .chat-titulo{
+        width: 100%;
+        font-size: 20px;
+        color: #002715;
+        margin-bottom: 50px;
+        display: flex ;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        
+    }
+
+    .chat-titulo h1 h4{
+        text-align: center;
+    }
+
+    .Panel{
+        margin-top: 5px;
+        background: #fff;
+        width: 100%;
+        height: 400px;
+        overflow: scroll ;
+        border: solid 3px #21974e;
+    }
+
+    .mennsaje{
+        width: 100%;
+        /* background: #21974e; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 1px;
+        align-items: center;
+        
+    }
+
+    .mennsaje input{
+       
+        width: 1000px;
+        height: 50px;
+        padding: 20px;
+        font-size: 20px;
+        border-radius: 20px;
+        border: none;   
+    }
+
+    .contenedor-parrafo{
+        background-color: #21974e;
+        width: 300px;
+        height: auto;
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 70%;
+        border-radius: 20px 20px 0px 20px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        
+        
+        
+    }
+    .remitente{
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 1.5; /* Ajusta el interlineado (el valor 1.5 indica 1.5 veces el tamaño de la fuente) */
+        letter-spacing: 0.5px; /* Ajusta el espaciado entre letras (el valor 2px indica 2 píxeles de espacio adicional) */
+        word-wrap: break-word;
+        
+    }
+    .fecha-texto{
+        margin-left: 65%;
+        font-size: 10px;
+    }
+    
+    .contenedor-parrafo2{
+        background-color: #ffffff;
+        width: 300px;
+        height: auto;
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        border-radius: 20px 20px 20px 0px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        
+        
+        
+    }
+    .destinatario{
+        color: #21974e;
+        font-size: 20px;
+        line-height: 1.5; /* Ajusta el interlineado (el valor 1.5 indica 1.5 veces el tamaño de la fuente) */
+        letter-spacing: 0.5px; /* Ajusta el espaciado entre letras (el valor 2px indica 2 píxeles de espacio adicional) */
+        word-wrap: break-word;
+    }
+    .fecha-texto2{
+        margin-left: 65%;
+        font-size: 10px;
+    }
+
+    @media (max-width: 320px) {
+        
+        .Logout{
+            font-size: 13px;
+            display: flex ;
+            margin-left: 30px;
+        }
+
+        .menu{
+            display: flex ;
+            flex-direction: column;
+            flex-wrap:wrap ;
+            padding: 5px;
+        }
+        .Logo{
+          
+           padding-top: 350px;
+           
+        }
+        .contenido_hijo .Logo{
+            margin-top: -100px;
+        }
+
+        .contenido_hijo .btnlogin{
+            width: 100px;
+            height: 50px;
+        }
+        
+        .chat-titulo h2{
+            font-size: 17px;
+        }
+
+        .chat-titulo{
+            margin-top: -100px;
+            font-size: 15px;  
+        }
+        
+        .card img{
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .btnlogin2{
+            font-size: 10px;
+        }
+
+    }
+    
+   /*------------------------------------------ Agentes de venta----------------------------  */
+    
+   /* ------------------------ index -------------------------------- */
+   
+
+.botones_agente{
+    display: inline-block;
+    background: linear-gradient(to bottom, #21974e,#21974e, #1c4432);
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+    .botones_agente a{
+        text-decoration: none;
+        color:white;
+    }
+
+    .botones_agente i {
+        margin-left: 10px;
+        color: white;
+    }
+
+
+    .botones_agente2{
+        display: inline-block;
+        background: linear-gradient(to bottom, #0420d5,#0627bb);
+        color: #fff;
+        font-size: 15px;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+        .botones_agente2 a{
+            text-decoration: none;
+            color:white;
+        }
+    
+        .botones_agente2 i {
+            margin-left: 10px;
+            color: white;
+        }
+
+        /**------------------------ Evidencia------------------**/
+    .selecciona_archivo{
+        margin-top: 20px;
+        /* background: #fff;  */
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+       
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .selecciona_archivo .input_archivo{
+        /* background: #0420d5; */
+        width: 100%;
+        height: 200px; 
+        border: 3px #1c4432 dashed;
+        padding: 10px;
+        display: flex;
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;    
+    }
+
+    .selecciona_archivo .btnlogin2{
+        font-size: 15px;
+    }
+
+    /* ------------ Actualizar ------------- */
+
+    .datos_actualizar{
+        /* background: #21974e; */
+        width: 100%;
+        padding: 50px;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;
+        justify-content: space-around;
+            
+    }
+
+    .datos_actualizar{
+        font-size: 20px;
+    }
+
+    .datos_actualizar .btnlogin2{
+        background: linear-gradient(to bottom, #0420d5,#041e95);
+        margin-top: 10px;
+    }
+
+    .Ajuste_imagen{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 200px;
+    }
+
+ /*-------- zonas admin ------*/
+
+.entrada_zona{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+ .entrada_zona input{
+    font-size: 20px;
+    padding: 10px;
+    width: 400px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 50px;
+ }
+
+#home{
+    color: white;
+    text-decoration: none;
+}

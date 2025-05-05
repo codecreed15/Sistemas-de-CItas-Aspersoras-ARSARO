@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <link rel="stylesheet" href="CSS/Registro.css"> 
+
+     
+
+
+      <!--Script para mandar llamar iconos desde la nube-->
+      <script src="https://kit.fontawesome.com/6a4e8ddd92.js" crossorigin="anonymous"></script>
+    <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+      <link rel="shortcut icon" href="../Imagenes/blanco.png"">
+
+      <!-- API fuentes -->
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <title>Registro Datos</title>
+</head>
+
+<body>
+
+    <section class="padre">
+        <section class="logo">
+            <section class="eslogan">REGISTRO DE DATOS</section>
+            <section class="img_logo"></section>
+        </section>
+
+        <form id="formulario" name="formulario" method="post">
+            <section class="datos">
+
+                <LAbel> Datos personales</label><br>
+                <section class="personales">
+                    <div>
+                        <input type="text" id="nombre" placeholder="Nombre" required><i class="fa-solid fa-user fa-xl"></i>
+                    </div>
+                    <div>
+                        <input type="text" id="apep" placeholder="Apellido Paterno" required><i class="fa-solid fa-user fa-xl"></i>
+                        <!-- <input type="text" id="apep" name="apep" placeholder="Apellido Paterno" <i class="fa-solid fa-user fa-xl"></i> -->
+                     </div>
+                    <div>
+                        <input type="text" id="apem" name="apem" placeholder="Apellido Materno" required><i class="fa-solid fa-user fa-xl"></i>
+                    </div>
+                    <div>
+                        <input type="number" id="tel" name="tel" placeholder="Teléfono" required> <i class="fa-solid fa-mobile-button fa-2xl"></i>
+                    </div>
+                    <div>
+                        <input type="text" id="empresa" name="empresa" placeholder="Empresa/organización" required> <i class="fa-solid fa-building fa-2xl"></i>
+                    </div>
+                    </section>
+                    <br>
+
+                 <label> Dirección</label><br>   
+                 <section class="personales">
+                    <div>
+                        <input type="text" id="calle" name="calle" placeholder="Calle #, Colonia" required> <i class="fa-sharp fa-solid fa-location-dot fa-2xl"></i>
+                    </div>
+                    <div>
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required> <i class="fa-solid fa-city fa-2xl"></i>
+                    </div>
+                    <div>
+                        <input type="text" id="estado" name="estado" placeholder="Estado" required> <i class="fa-solid fa-city fa-2xl"></i>
+                    </div>
+                    <div>
+                        <input type="text" id="codigo" name="codigo" placeholder="C.P/N.A" required> <i class="fa-solid fa-mailbox fa-2xl"></i>
+                    </div>
+                    </section>
+                    <br>
+
+                <label> Datos electrónicos</label><br>
+                <section class="personales">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Correo" required><i class="fa-solid fa-envelope fa-2xl"></i>
+                    </div>
+                    <div>
+                        <input type="text" id="user" name="user" placeholder="Usuario"  autocomplete="username" required><i class="fa-solid fa-user fa-2xl "></i>
+                    </div>
+                    <div>
+                        <input type="password" id="contra" name="contra" placeholder="Contraseña"  autocomplete="current-password" required><i class="fa-solid fa-key fa-2xl"></i><br>
+                     </div>
+                     <div>
+                        <input type="password" id="contra2" name="contra2" placeholder="Contraseña Autentificación"  autocomplete="current-password" required><i class="fa-solid fa-key fa-2xl"></i><br>
+                     </div>
+                     
+                </section>
+
+                <section class="button">
+                <button class="btnlogin" onclick="enviarDatos()" >
+                        Registrar
+                <i class="fa-solid fa-circle-plus fa-2xl"></i>
+                    </button>
+                </section>
+            </section>
+        </form>
+        <!-- Script JS -->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script type="text/javascript" src="JS/Registro_Cliente.js"></script>
+
+    </section>
+     
+</body>
+</html>
