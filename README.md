@@ -12,4 +12,7 @@ A pesar de que el proyecto no se implementó en producción me dejó aprendizaje
   - Comunicación en equipo con la empresa.
 
  A continuación mostraré capturas del funcionamiento del sistema.
- 
+
+### Dashboard del Cliente
+
+<img width="467" height="302" alt="citas" src="https://github.com/user-attachments/assets/3fbcbfd2-0df6-4b85-a829-e709212ee892" />
